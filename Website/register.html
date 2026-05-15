@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div id="header1"></div>
+    <div class="register-box">
+
+        <h2>Register</h2>
+
+        <form>
+
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="email" placeholder="Email" required>
+
+            <input type="password" placeholder="Password" required>
+
+            <input type="password" placeholder="Confirm Password" required>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <p>Already have an account? <a href="login.html">Login</a></p>
+
+    </div>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+}
+
+.container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffffff;
+}
+
+.register-box p{
+    padding-top:10px;
+}
+
+.register-box{
+    background:#fff;
+    padding:30px;
+    width:300px;
+    text-align:center;
+    border-radius:10px;
+    margin-left:600px;
+    margin-right:600px;
+    margin-top:50px;
+    margin-bottom:50px;
+    border:1px solid black;
+}
+
+.register-box input{
+    width:100%;
+    margin:8px 0;
+    padding:10px;
+    border-radius:5px;
+    text-align:center;
+}
+
+.register-box button{
+    width:100%;
+    padding:10px;
+    background:#ff9100;
+    color:#fff;
+    border:none;
+}
+    </style>
+    <div id="footer1"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

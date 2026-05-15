@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <title>Foodie - Home Page</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial;
+            background-color:#fff3e0;
+            text-align:center;
+        }
+
+        header{
+            background-color:orange;
+            color:white;
+            padding:20px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-size:18px;
+        }
+
+        .home{
+            padding:40px;
+        }
+
+        .home img{
+            width:350px;
+            border-radius:15px;
+        }
+
+        .food-box{
+            display:inline-block;
+            background:white;
+            padding:20px;
+            margin:15px;
+            border-radius:10px;
+            width:220px;
+        }
+
+        .food-box img{
+            width:180px;
+            height:120px;
+            border-radius:10px;
+        }
+
+        button{
+            background-color:orange;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            padding:10px;
+            margin-top:30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header1"></div><br><br>
+
+
+    <header>
+        <h1>Foodie</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="home">
+
+        <h2>Buy Delicious Food Online</h2>
+
+        <p>Order your favorite food now!</p>
+
+        <img src="food.jpg" alt="Food">
+
+        <div>
+
+            <div class="food-box">
+                <img src="pizza.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>₹199</p>
+                    <a href="payment.html">
+                        <button>Buy Now</button>
+                    </a>
+                
+            </div>
+
+            <div class="food-box">
+                <img src="burger.jpg" alt="Burger">
+                <h3>Burger</h3>
+                <p>₹149</p>
+                    <a href="payment.html">
+                        <button>Buy Now</button>
+                    </a>
+
+              
+            </div>
+
+            <div class="food-box">
+                <img src="pasta.jpg" alt="Pasta">
+                <h3>Pasta</h3>
+                <p>₹179</p>
+                    <a href="payment.html">
+                        <button>Buy Now</button>
+                    </a>
+            </div>
+
+            <div class="food-box">
+                <img src="fries.jpg" alt="Fries">
+                <h3>French Fries</h3>
+                <p>₹99</p>
+                    <a href="payment.html">
+                        <button>Buy Now</button>
+                    </a>
+                
+            </div>
+            <link rel="stylesheet" href="payment.html">
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>© 2026 Foodie Website</p>
+    </footer>
+    <div id="footer1"></div>
+    <script src="script.js"></script>
+</body>
+</html>

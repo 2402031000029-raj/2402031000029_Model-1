@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>Foodie</h3>
+      <p>Delicious food delivered to your doorstep.</p>
+    </div>
+
+    <div>
+      <p>Open: 9 AM - 10 PM</p>
+      <p>Contact: support@foodie.com</p>
+    </div>
+  </div>
+
+  <p class="copyright">
+    © 2026 Foodie. All Rights Reserved.
+  </p>
+</footer>
+
+<style>
+  .footer{
+    background:#222;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+  }
+
+  .footer-content{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    max-width:800px;
+    margin:auto;
+  }
+
+  .footer h3{
+    color:#ff9800;
+    margin-bottom:5px;
+  }
+
+  .footer p{
+    margin-bottom:5px ;
+    font-size:14px;
+    gap:10px;
+  }
+
+  @media(max-width:600px){
+    .footer-content{
+      flex-direction:column;
+    }
+  }
+</style>
+    
+</body>
+</html>
