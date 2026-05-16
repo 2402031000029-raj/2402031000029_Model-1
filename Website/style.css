@@ -8,7 +8,7 @@
     header{
       background:black;
       color:white;
-      padding:15px 40px;
+      padding:15px 30px;
       display:flex;
       justify-content:space-between;
     }
@@ -23,9 +23,12 @@
     nav a{
       color:white;
       text-decoration:none;
-      margin:0 15px;
+      margin: 15px;
       font-size:18px;
+      align-items:center;
+      justify-content:center;
     }
+
 
     nav a:hover{
       color:orange;
@@ -36,7 +39,7 @@
     }
   
 
-    button{
+    button {
       background:orange;
       border:none;
       padding:10px 20px;
@@ -44,6 +47,7 @@
       color:white;
       cursor:pointer;
     }
+    
 
     .footer{
     background:#222;

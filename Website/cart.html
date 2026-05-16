@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Add to Cart</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            text-align: center;
+            background: #fff3e0;
+            margin:0;
+            padding:0;
+        }
+
+        h1{
+            margin-top:40px;
+        }
+
+        /* MAIN CONTAINER */
+
+        .food-container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:25px;
+            padding:30px;
+        }
+
+        /* FOOD BOX */
+
+        .food-box{
+            background:white;
+            width:250px;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+            transition:0.3s;
+        }
+
+        .food-box:hover{
+            transform:scale(1.05);
+        }
+
+        .food-box img{
+            width:200px;
+            height:200px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+
+        h2{
+            margin-top:10px;
+        }
+
+        p{
+            font-size:20px;
+            color:rgb(255, 255, 255);
+        }
+
+        /* QUANTITY */
+
+        .qty-box{
+            margin:15px 0;
+        }
+
+        .qty-box input{
+            width:70px;
+            padding:8px;
+            text-align:center;
+            font-size:16px;
+        }
+
+        /* BUTTON */
+
+        .cart-btn{
+            background:orange;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .cart-btn:hover{
+            background:darkorange;
+        }
+
+        .cart-btn a{
+            color:white;
+            text-decoration:none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header1"></div>
+
+    <h1>Foodie Cart</h1>
+
+    <!-- MAIN FOOD SECTION -->
+
+    <div class="food-container">
+
+        <!-- PIZZA -->
+
+        <div class="food-box">
+
+            <img src="images/pizza.jpg" alt="Pizza">
+
+            <h2>Pizza</h2>
+
+            <p>Price: ₹199</p>
+
+            <div class="qty-box">
+                <input type="number" value="1" min="1">
+            </div>
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+
+
+        </div>
+
+        <!-- BURGER -->
+
+        <div class="food-box">
+
+            <img src="images/burger.jpg" alt="Burger">
+
+            <h2>Burger</h2>
+
+            <p>Price: ₹149</p>
+
+            <div class="qty-box">
+                <input type="number" value="1" min="1">
+            </div>
+
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+        <!-- PASTA -->
+
+        <div class="food-box">
+
+            <img src="images/Honey Chilli Potato Recipe_ How to Make Honey….jpg" alt="Pasta">
+
+            <h2>Pasta</h2>
+
+            <p>Price: ₹179</p>
+
+            <div class="qty-box">
+                <input type="number" value="1" min="1">
+            </div>
+
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+        <!-- FRIES -->
+
+        <div class="food-box">
+
+            <img src="images/fries.jpg" alt="French Fries">
+
+            <h2>French Fries</h2>
+
+            <p>Price: ₹99</p>
+
+            <div class="qty-box">
+                <input type="number" value="1" min="1">
+            </div>
+
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+        <!-- SANDWICH -->
+
+        <div class="food-box">
+
+            <img src="images/Cheesy Grilled Pepperoni Sandwich by SooperChef _ Ramzan Special Recipes.jpg" alt="Sandwich">
+
+            <h2>Sandwich</h2>
+
+            <p>Price: ₹129</p>
+
+            <div class="qty-box">
+                <input type="number" value="1" min="1">
+            </div>
+
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div id="footer1"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

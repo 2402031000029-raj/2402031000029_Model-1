@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>cartpage.html</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background:#fff3e0;
+            margin:0;
+            padding:20px;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .cart-container{
+            max-width:900px;
+            margin:auto;
+        }
+
+        .cart-item{
+            background:white;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+        }
+
+        .cart-item img{
+            width:120px;
+            height:120px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+
+        .details{
+            flex:1;
+            padding-left:20px;
+        }
+
+        .details h2{
+            margin:0;
+        }
+
+        .price{
+            color:green;
+            font-size:22px;
+            margin:10px 0;
+        }
+
+        .quantity-box{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            
+        }
+
+        .quantity-box button{
+            width:50px;
+            height:50px;
+            border:none;
+            border-radius:50%;
+            background:orange;
+            color:white;
+            font-size:20px;
+            cursor:pointer;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .remove-btn{
+            background:red;
+            color:white;
+            border:none;
+            padding:10px 15px;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        .total-box{
+            background:white;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+            text-align:center;
+            margin-top:30px;
+        }
+
+        .payment-btn{
+            background:green;
+            color:white;
+            border:none;
+            padding:12px 25px;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:18px;
+            margin-top:15px;
+        }
+
+        .payment-btn:hover{
+            transform:scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="header1"></div>
+
+    <h1>Your Cart 🛒</h1>
+
+    <div class="cart-container" id="cartContainer">
+
+        <!-- ITEM 1 -->
+
+        <div class="cart-item">
+
+            <img src="images/pizza.jpg">
+
+            <div class="details">
+
+                <h2>Pizza</h2>
+
+                <div class="price" data-price="199">
+                    ₹199
+                </div>
+
+                <div class="quantity-box">
+
+                    <button onclick="decrease(this)">-</button>
+
+                    <span class="qty">1</span>
+
+                    <button onclick="increase(this)">+</button>
+
+                </div>
+
+            </div>
+
+            <button class="remove-btn" onclick="removeItem(this)">
+                Remove
+            </button>
+
+        </div>
+
+        <!-- ITEM 2 -->
+         <div class="cart-item">
+
+            <img src="images/burger.jpg">
+
+            <div class="details">
+
+                <h2>Burger</h2>
+                <div class="price" data-price="149">
+                    ₹149
+                    </div>
+                <div class="quantity-box">
+                    <button onclick="decrease(this)">-</button>
+
+                    <span class="qty">1</span>
+                    <button onclick="increase(this)">+</button>
+                    </div>
+                    </div>
+                    <button class="remove-btn" onclick="removeItem(this)">
+                        Remove
+                        </button>
+                        </div>
+
+        <div class="cart-item">
+
+            <img src="images/Penne Arrabiata • Olive & Mango.jpg">
+
+            <div class="details">
+
+                <h2>Pasta</h2>
+
+                <div class="price" data-price="179">
+                    ₹179
+                </div>
+
+                <div class="quantity-box">
+
+                    <button onclick="decrease(this)">-</button>
+
+                    <span class="qty">1</span>
+
+                    <button onclick="increase(this)">+</button>
+
+                </div>
+
+            </div>
+
+            <button class="remove-btn" onclick="removeItem(this)">
+                Remove
+            </button>
+        </div>
+
+    <div class="cart-item">
+
+            <img src="images/fries.jpg">
+
+            <div class="details">
+
+                <h2>French Fries</h2>
+
+                <div class="price" data-price="99">
+                    ₹99
+                </div>
+
+                <div class="quantity-box">
+
+                    <button onclick="decrease(this)">-</button>
+
+                    <span class="qty">1</span>
+
+                    <button onclick="increase(this)">+</button>
+
+                </div>
+
+            </div>
+
+            <button class="remove-btn" onclick="removeItem(this)">
+                Remove
+            </button>
+        </div>
+
+     <div class="cart-item">
+
+            <img src="images/Cheesy Grilled Pepperoni Sandwich by SooperChef _ Ramzan Special Recipes.jpg">
+
+            <div class="details">
+
+                <h2>Sandwich</h2>
+
+                <div class="price" data-price="129">
+                    ₹129
+                </div>
+
+                <div class="quantity-box">
+
+                    <button onclick="decrease(this)">-</button>
+
+                    <span class="qty">1</span>
+
+                    <button onclick="increase(this)">+</button>
+
+                </div>
+
+            </div>
+
+            <button class="remove-btn" onclick="removeItem(this)">
+                Remove
+            </button>
+        </div>
+
+
+    <!-- TOTAL -->
+
+    <div class="total-box">
+
+        <h2 id="totalPrice">
+            Total Price : ₹348
+        </h2>
+        <a href="payment.html">
+            <button class="payment-btn">
+                Proceed To Payment
+            </button>
+        </a>
+
+    </div><br><br>
+    <script>
+
+        function increase(button){
+
+            let qty =
+            button.parentElement.querySelector(".qty");
+
+            qty.innerHTML =
+            Number(qty.innerHTML) + 1;
+
+            updateTotal();
+        }
+
+        function decrease(button){
+
+            let qty =
+            button.parentElement.querySelector(".qty");
+
+            if(Number(qty.innerHTML) > 1){
+
+                qty.innerHTML =
+                Number(qty.innerHTML) - 1;
+            }
+
+            updateTotal();
+        }
+
+        function removeItem(button){
+
+            button.parentElement.remove();
+
+            updateTotal();
+        }
+
+        function updateTotal(){
+
+            let items =
+            document.querySelectorAll(".cart-item");
+
+            let total = 0;
+
+            items.forEach(item => {
+
+                let price =
+                Number(
+                item.querySelector(".price")
+                .getAttribute("data-price"));
+
+                let qty =
+                Number(
+                item.querySelector(".qty")
+                .innerHTML);
+
+                total += price * qty;
+            });
+
+            document.getElementById("totalPrice")
+            .innerHTML =
+            "Total Price : ₹" + total;
+        }
+
+        function payment(){
+
+            alert("Payment Successful ✅");
+        }
+
+    </script>
+
+    <div id="footer1"></div>
+    <script src="script.js"></script>
+</body>
+</html>
