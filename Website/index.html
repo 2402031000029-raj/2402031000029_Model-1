@@ -3,9 +3,11 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Foodie - Home Page</title>
 
     <style>
+        
         body{
             margin:0;
             font-family: Arial;
@@ -17,6 +19,7 @@
             background-color:rgb(0, 0, 0);
             color:white;
             padding:20px;
+            position: sticky;
         }
 
         nav a{
@@ -26,7 +29,23 @@
             font-size:18px;
         }
 
+        .food-row{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; 
+            margin-left: 70px;
+        }
+
+        .food-box{
+            flex: 1 1 250px ;
+        }
+
         .home{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;  
             padding:40px;
         }
 
@@ -37,18 +56,29 @@
         }
 
         .food-box{
-            display:inline-block;
-            background:white;
-            padding:20px;
-            margin:15px;
-            border-radius:10px;
-            width:220px;
+            flex:1  ;
+          background:white;
+            width:250px;
+            padding:10px;
+            border-radius:15px;
+            box-shadow:0 0 10px gray;
+            transition:0.3s;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+            
         }
 
         .food-box img{
-            width:180px;
-            height:120px;
+           width:200px;
+            height:200px;
+            object-fit:cover;
             border-radius:10px;
+            flex-direction: line;
         }
 
         button{
@@ -66,23 +96,240 @@
             padding:10px;
             margin-top:30px;
         }
+
+        .home-info{
+            margin-left: 425px;
+        }
+
+        h1{
+            margin-top: 100px;
+            color: orange;
+        }
+
+        /* Popup Background */
+
+        .popup{
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        /* Popup Box */
+
+        .popup-content{
+            background-color: white;
+            width: 350px;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .popup-content img{
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .popup-content h2{
+            color: orange;
+        }
+
+        .popup-content p{
+            font-size: 18px;
+        }
+
+        /* Close Button */
+
+        .close{
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 25px;
+            cursor: pointer;
+            color: red;
+        }
+
+        button{
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        
+
+        body{
+            background-color: #fff3e0;
+        }
+
+        .carousel img{
+            height: 350px;
+            object-fit: cover;
+        }
+
+        h1{
+            color: orange;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+   
+
+
+        
     </style>
 </head>
 
 <body>
+
+
+        <!-- Popup Modal -->
+
+        <div class="popup" id="popup">
+
+            <div class="popup-content">
+
+                <span class="close" id="closeBtn">&times;</span>
+
+                <img src="images/pizza.jpg" alt="Pizza" style="overflow: hidden;">
+
+                <h2>Special Offer</h2>
+
+                <p>Get 20% OFF on Pizza Today!</p>
+
+                    <a href="menu.html">
+                        <button class="btn2">Order Now</button>
+                    </a>
+
+            </div>
+
+        </div>
+
+ 
+
+
+
+
+   
     <div id="header1"></div><br><br>
+
+<body>
+
+    <h1>Welcome To Foodie</h1>
+
+    <!-- Bootstrap Carousel -->
+
+    <div id="foodieSlider"
+    class="carousel slide container"
+    data-bs-ride="carousel">
+
+        <!-- Indicators -->
+
+        <div class="carousel-indicators">
+
+            <button type="button"
+            data-bs-target="#foodieSlider"
+            data-bs-slide-to="0"
+            class="active">
+            </button>
+
+            <button type="button"
+            data-bs-target="#foodieSlider"
+            data-bs-slide-to="1">
+            </button>
+
+            <button type="button"
+            data-bs-target="#foodieSlider"
+            data-bs-slide-to="2">
+            </button>
+
+        </div>
+
+        <!-- Slides -->
+
+        <div class="carousel-inner rounded">
+
+            <div class="carousel-item active">
+                <img src="images/pizza.jpg"
+                class="d-block w-100"
+                alt="Pizza">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/burger.jpg"
+                class="d-block w-100"
+                alt="Burger">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/Penne Arrabiata • Olive & Mango.jpg"
+                class="d-block w-100"
+                alt="Pasta">
+            </div>
+
+        </div>
+
+        <!-- Previous Button -->
+
+        <button class="carousel-control-prev"
+        type="button"
+        data-bs-target="#foodieSlider"
+        data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon">
+            </span>
+
+        </button>
+
+        <!-- Next Button -->
+
+        <button class="carousel-control-next"
+        type="button"
+        data-bs-target="#foodieSlider"
+        data-bs-slide="next">
+
+            <span class="carousel-control-next-icon">
+            </span>
+
+        </button>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+
+
+    
+
+    
 
     
 
     <div class="home">
+        <div class="home-info">
+        <h2 style="padding-bottom: 10px;">Buy Delicious Food Online</h2>
 
-        <h2>Buy Delicious Food Online</h2>
+        <p style="padding-bottom: 10px;">Order your favorite food now!</p>
 
-        <p>Order your favorite food now!</p>
+        <img src="images/about2.avif" alt="Food"><br><br><br>
+        </div>
 
-        <img src="images/about2.avif" alt="Food">
-
-        <div>
+        
+        <div class="food-row">
 
             <div class="food-box">
                 <img src="images/pizza.jpg" alt="Pizza">
@@ -92,6 +339,35 @@
                         <button>Buy Now</button>
                     </a>
             </div>
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <div class="food-box">
                 <img src="images/burger.jpg" alt="Burger">
@@ -127,6 +403,125 @@
     
     <div id="footer1"></div>
     <script src="script.js"></script>
+     <script>
+
+        // Open popup automatically when website opens
+
+        window.onload = function(){
+            document.getElementById("popup").style.display = "block";
+        }
+
+        // Close popup
+
+        document.getElementById("closeBtn").onclick = function(){
+            document.getElementById("popup").style.display = "none";
+        }
+
+
+    </script>
+
+    <!-- Scroll To Top Button -->
+
+<button onclick="topFunction()" id="topBtn">
+    ↑
+</button>
+
+<style>
+
+#topBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+}
+
+#topBtn:hover{
+    background-color: darkorange;
+}
+
+</style>
+
+<script>
+
+let mybutton = document.getElementById("topBtn");
+
+// Show button when scrolling
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+
+    if (document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100) {
+
+        mybutton.style.display = "block";
+
+    } else {
+
+        mybutton.style.display = "none";
+    }
+}
+
+// Scroll to top
+
+function topFunction() {
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+<style>
+
+/* Your normal CSS */
+
+body{
+    background:#fff5eb;
+}
+
+.food-box{
+    width:250px;
+}
+
+/* Media Query */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero img{
+        height:250px;
+    }
+
+    .food-box{
+        margin-bottom:20px;
+    }
+
+    .carousel img{
+        height:250px;
+    }
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+}
+
+</style>
 
 
 </body>

@@ -119,9 +119,6 @@
 
             <p>Price: ₹199</p>
 
-            <div class="qty-box">
-                <input type="number" value="1" min="1">
-            </div>
              <a href="cartpage.html">
                 <button class="cart-btn">Add to Cart</button>
             </a>
@@ -140,9 +137,7 @@
 
             <p>Price: ₹149</p>
 
-            <div class="qty-box">
-                <input type="number" value="1" min="1">
-            </div>
+        
 
              <a href="cartpage.html">
                 <button class="cart-btn">Add to Cart</button>
@@ -160,9 +155,7 @@
 
             <p>Price: ₹179</p>
 
-            <div class="qty-box">
-                <input type="number" value="1" min="1">
-            </div>
+         
 
              <a href="cartpage.html">
                 <button class="cart-btn">Add to Cart</button>
@@ -180,10 +173,7 @@
 
             <p>Price: ₹99</p>
 
-            <div class="qty-box">
-                <input type="number" value="1" min="1">
-            </div>
-
+      
              <a href="cartpage.html">
                 <button class="cart-btn">Add to Cart</button>
             </a>
@@ -200,9 +190,7 @@
 
             <p>Price: ₹129</p>
 
-            <div class="qty-box">
-                <input type="number" value="1" min="1">
-            </div>
+        
 
              <a href="cartpage.html">
                 <button class="cart-btn">Add to Cart</button>
@@ -212,9 +200,165 @@
 
     </div>
 
+    <div class="food-container">
+
+        <!-- PIZZA -->
+
+        <div class="food-box">
+
+            <img src="images\275704808432003636.jpg" alt="Pizza">
+
+            <h2>Pizza</h2>
+
+            <p>Price: ₹199</p>
+
+          
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+
+
+        </div>
+
+        <!-- BURGER -->
+
+        <div class="food-box">
+
+            <img src="images\Lipton Onion Soup Burger Recipe.jpg"alt="Burger">
+
+            <h2>Burger</h2>
+
+            <p>Price: ₹149</p>
+
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+        <!-- PASTA -->
+
+        <div class="food-box">
+
+            <img src="images\Penne Arrabiata • Olive & Mango.jpg" alt="Pasta">
+
+            <h2>Pasta</h2>
+
+            <p>Price: ₹179</p>
+
+          
+
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+        <!-- FRIES -->
+
+        <div class="food-box">
+
+            <img src="images\Cajun Fries _ Diethood (1).jpg" alt="French Fries">
+
+            <h2>French Fries</h2>
+
+            <p>Price: ₹99</p>
+
+         
+
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+        <!-- SANDWICH -->
+
+        <div class="food-box">
+
+            <img src="images\🧿Abhay Thakur on Instagram_ “Grilled chicken….jpg" alt="Sandwich">
+
+            <h2>Sandwich</h2>
+
+            <p>Price: ₹129</p>
+
+          
+             <a href="cartpage.html">
+                <button class="cart-btn">Add to Cart</button>
+            </a>
+
+        </div>
+
+    </div>
+
+
     <div id="footer1"></div>
 
     <script src="script.js"></script>
+
+    <!-- Scroll To Top Button -->
+
+<button onclick="topFunction()" id="topBtn">
+    ↑
+</button>
+
+<style>
+
+#topBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+}
+
+#topBtn:hover{
+    background-color: darkorange;
+}
+
+</style>
+
+<script>
+
+let mybutton = document.getElementById("topBtn");
+
+// Show button when scrolling
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+
+    if (document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100) {
+
+        mybutton.style.display = "block";
+
+    } else {
+
+        mybutton.style.display = "none";
+    }
+}
+
+// Scroll to top
+
+function topFunction() {
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
 
 </body>
 </html>

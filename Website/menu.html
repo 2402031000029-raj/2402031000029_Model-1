@@ -157,5 +157,68 @@
     <div id="footer1"></div>
     <script src="script.js"></script>
 
+    <!-- Scroll To Top Button -->
+
+<button onclick="topFunction()" id="topBtn">
+    ↑
+</button>
+
+<style>
+
+#topBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+}
+
+#topBtn:hover{
+    background-color: darkorange;
+}
+
+</style>
+
+<script>
+
+let mybutton = document.getElementById("topBtn");
+
+// Show button when scrolling
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+
+    if (document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100) {
+
+        mybutton.style.display = "block";
+
+    } else {
+
+        mybutton.style.display = "none";
+    }
+}
+
+// Scroll to top
+
+function topFunction() {
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+
 </body>
 </html>
