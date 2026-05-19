@@ -27,11 +27,20 @@
       font-size:18px;
       align-items:center;
       justify-content:center;
+      transition: 0.3s ease;
     }
 
 
     nav a:hover{
       color:orange;
+      width: 100%;
+      
+    }
+    nav a::after{
+      content: "";
+      position: absolute;
+      height: 2px;
+      background: rgb(255, 255, 255);
     }
 
     header nav button .btn2{
